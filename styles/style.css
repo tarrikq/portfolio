@@ -5,6 +5,7 @@
     --project-thumbnail-min-dimension: 400px;
     --nav-padding: 6vh;
     --nav-item-padding: .5rem;
+    --project-frame-dimension: 500px;
 }
 
 html {
@@ -20,6 +21,7 @@ nav {
     background-color: #dee2e8;
 }
 
+
 nav a {
     text-decoration: none;
 }
@@ -28,34 +30,111 @@ nav a {
     margin: 1rem 0 1rem 2.5rem;
     padding-bottom: var(--nav-item-padding);
     font-size: 2rem;
-    color: #707070;
+    color: #fffafa;
 }
 
 .nav-selected {
     font-weight: 700;
-    color: #273852;
-    border-bottom: .3rem solid #e8666d;
+    color: #db706a;
     stroke-linecap: round;
 }
 
+.about-me-nav{
+    background-color: #FFFAFA;
+}
+
+.about-nav-text{
+    color: #585858;
+}
+
 .hero{
+    padding: 0 0 213px;
     background-color: #dee2e8;
     width: 100%;
 }
-
-.hero h1{
-    margin: 1rem 1rem 1rem 1rem;
+.hero-header{
+    width: 563px;
+    height: 158px;
+    flex-grow: 0;
+    margin: 0 0 0 100px;
+    font-family: Montserrat;
+    font-size: 71px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fffafa;
 }
 
+.hero-subheader{
+    width: 552px;
+    height: 108px;
+    flex-grow: 0;
+    margin: 35px 11px 0 100px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+}
+
+.project-description-frame {
+    width: var(--project-frame-dimension);
+    height: var(--project-frame-dimension);
+    position: relative;
+    overflow: hidden;
+  }
+
+.project-div h1{
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #587e8c;
+    text-transform: capitalize;
+}
+
+.project-div h2{
+    font-family: Montserrat;
+    font-size: 20px;
+    margins: 200 0 200 0;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fffafa;
+}
+
+h3{
+
+}
 body {
     width: 100%;
     height: 100%;
 }
  
+body p{
+    padding-bottom: 1rem;
+}
+
 .body-content {
     width: var(--body-content-width);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-div {
@@ -63,60 +142,165 @@ body {
     width: var(--project-div-width);
     height: var(--project-div-height);
     background-color: #FFFAFA;
-    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+    margin: 17.5vh 0 0 0;
+}
+
+.bottom-project-div{
+    margin-bottom: 17.5vh;
 }
 
 .project-thumbnail {
-    min-height: var(--project-thumbnail-min-dimension);
-    min-width: var(--project-thumbnail-min-dimension);
-    width: calc( var(--body-content-width) / 2);
+    width: 100%;
     height: 100%;
-    overflow: hidden;
-    margin: 3rem 3rem 3rem 3rem;
 }
+
+.project-sliding-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: transform 300ms ease-in-out;
+    height: var(--project-frame-dimension);
+    width: var(--project-frame-dimension);
+    z-index: 1;
+  }
+
+.content-hidden {
+    transform: translate(0px, var(--project-frame-dimension));
+  }
+
+.project-full-description {
+    width: var(--project-frame-dimension);
+    height: calc(var(--project-frame-dimension) * 0.9);
+    background-color: rgba(61, 61, 61, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-full-description * {
+    margin: auto 10%;
+    text-align: center;
+    color: #fffafa;
+  }
+  
+.view-project-page-btn {
+    width: var(--project-frame-dimension);
+    height: calc(var(--project-frame-dimension) * 0.1);
+    cursor: pointer;
+    background-color: rgba(37, 37, 37, 0.75);
+    color: #fffafa;
+    border: none;
+    text-transform: uppercase;
+  }
 
 .project-thumbnail img {
     width: 100%
 }
+.about-me-div{
+    display: flex;
+    min-height: var(--project-thumbnail-min-dimension);
+    width: var(--project-div-width);
+    height: var(--project-div-height);
+    background-color: #FFFAFA;
+    margin: 0 auto;
+    justify-content: center;
+}
 
-.project-description {
+.about-description {
     width: calc( var(--body-content-width) / 2);
+    margin: auto 10%;
+    font-family: WorkSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #585858;
 }
 
 
 footer {
+    max-width: 100vw;
     width: 100vw;
     margin-top: 1rem;
     background-color: #3360a3;
     padding-top: 10vh;
 }
 
+.footer-body-font{
+    font-family: WorkSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fffafa;
+}
+
 .footer-top {
+    max-width: 100vw;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 12rem;
-    color: white;
+    gap: 20vw;
 }
 
 .footer-bottom {
+    max-width: 100vw;
+    width: 100vw;
     justify-content: space-between;
     display: flex;
-    color: white;
-    margin: 0 1rem 0 1rem;
+    font-family: WorkSans;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: left;
+    color: #db706a;
+}
+
+.footer-bottom p {
+    margin-left: 5rem;
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 15px;
+    margin-right: 5rem;
 }
 
 .footer-projects {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: white;
+    gap: 1rem;
+    margin: 0 0 2rem 0;
 }
 
 .footer-projects a {
-    color: white;
     text-decoration: none;
+}
+
+.footer-top p{
+    font-family: Montserrat;
+    font-size: 20px;
+    margin: 200 0 200 0;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fffafa;
 }
 
 @media only screen and (max-width: 500px){

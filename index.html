@@ -8,6 +8,10 @@
     <!-- <link rel="icon" type="image/svg" href=""/> -->
     <link rel="stylesheet" href="./styles/css-reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,61 +22,75 @@
     </nav>
     <div class="body-content">
         <div class="hero">
-            <h1>Hi, my name is Tarrik.</h1>
-            <h1>Environmental Engineer using data science to answer complex questions related to human health and the environment.</h1>
-        </div>
-        <div class="project-div">
-            <div class="project-thumbnail">
-                <img src="image/algae_1.png"/>
+            <div class="hero-header">
+                <h1>Hi, my name is Tarrik.</h1>
             </div>
-            <div class="project-description">
-                <h1>Lake Erie harmful algal bloom prediction</h1>
-                <h2>Predicting the mass concentration of cyanobacteria in Lake Erie by training a deep learning neural network using water quality parameters.</h2>
-                <button type="button" onclick="document.location='pages/algal_bloom.html'">Read more</button>
+            <div class="hero-subheader">
+                <h1>I'm an Environmental Engineer using data science to answer complex questions related to human health and the environment.</h1>
             </div>
         </div>
         <div class="project-div">
-            <div class="project-description">
-                <h1>California ground-level ozone prediction model</h1>
-                <h2>Predicting ground-level ozone concentration using available air pollutant data from stations throughout California using XGboost.</h2>
-                <button type="button" onclick="document.location='pages/cali_o3_spat.html'">Read more</button>
-            </div>
-            <div class="project-thumbnail">
-                <img src="image/ozone_1.png"/>
+            <h1>Lake Erie harmful algal bloom prediction</h1>
+            <div class="project-description-frame"> 
+                <img class="project-thumbnail" src="image/algae_1.png" />
+                <div class="project-sliding-content content-hidden">
+                    <div class="project-full-description">
+                        <h2>Predicting the mass concentration of cyanobacteria in Lake Erie by training a deep learning neural network using water quality parameters.</h2>
+                    </div>                    
+                    <button class="view-project-page-btn" type="button" onclick="document.location='pages/algal_bloom.html'">View full project</button>
+                </div>            
             </div>
         </div>
         <div class="project-div">
-            <div class="project-thumbnail">
-                <img src="image/particle_1.png" />
+            <h1>California ground-level ozone prediction model</h1>
+            <div class="project-description-frame">
+                <img class="project-thumbnail" src="image/ozone_1.png" />
+                <div class="project-sliding-content content-hidden">
+                    <div class="project-full-description">
+                        <h2>Predicting ground-level ozone concentration using available air pollutant data from stations throughout California using XGboost.</h2>
+                    </div>
+                    <button class="view-project-page-btn" type="button" onclick="document.location='pages/cali_o3_spat.html'">View full project</button>
+                </div>
             </div>
-            <div class="project-description">
-                <h1>Cryptosporidium oocyst sized particle analysis</h1>
-                <h2>Optimizing treatment plant chemical dosing operations through use of data pipelines, visualizations, and interactive web-apps.</h2>
-                <button type="button" onclick="document.location='pages/particle_count_report.html'">Read more</button>
+        </div>
+        <div class="project-div bottom-project-div">
+            <h1>Cryptosporidium oocyst sized particle analysis</h1>
+            <div class="project-description-frame">
+                <img class="project-thumbnail" src="image/particle_1.png" />
+                <div class="project-sliding-content content-hidden">
+                    <div class="project-full-description">
+                        <h2>Optimizing treatment plant chemical dosing operations through use of data pipelines, visualizations, and interactive web-apps.</h2>
+                    </div>
+                    <button class="view-project-page-btn" type="button" onclick="document.location='pages/particle_count_report.html'">View full project</button>
+                </div>
             </div>
         </div>
     </div>
     <footer>
         <div class="footer-top">
             <div class="footer-projects">
-                <h1>Work</h1>
-                <a href="./pages/algal_bloom.html">Harmful Algal Bloom</a>
-                <a href="./pages/cali_o3_spat.html">Ground-level Ozone Prediction</a>
-                <a href="./pages/particle_count_report.html">Particle Count Analysis</a>
+                <p>Projects</p>
+                <a class="footer-body-font" href="./pages/algal_bloom.html">Harmful Algal Bloom</a>
+                <a class="footer-body-font" href="./pages/cali_o3_spat.html">Ground-level Ozone Prediction</a>
+                <a class="footer-body-font" href="./pages/particle_count_report.html">Particle Count Analysis</a>
             </div>
-            <a >Resume</a>
-            <a>About</a>
+            <p>Resume</p>
+            <p>About</p>
         </div>
         <div class="footer-bottom">
-            <p class="footer-text-color"> © Tarrik Quneibi </p>
-            <button>
-                <a href="https://github.com/tarrikq"> Github</a>
-                <a href="https://www.linkedin.com/in/tarrik-quneibi-7185471a8/"> Linkedin </a>
-            </button>
+            <p> © 2023 Tarrik Quneibi </p>
+            <div class="social-media-buttons">
+                <button>
+                    <a href="https://github.com/tarrikq"> Github</a>
+                </button>
+                <button>
+                    <a href="https://www.linkedin.com/in/tarrik-quneibi-7185471a8/"> Linkedin </a>
+                </button>
+            </div>
         </div>
     </footer>
 </body>
 
-
+<script src="./scripts/slider.js"></script>
 
 </html>

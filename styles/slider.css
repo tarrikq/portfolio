@@ -1,0 +1,60 @@
+:root {
+  --project-frame-dimension: 500px;
+}
+
+.project-div {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-description-frame {
+  width: var(--project-frame-dimension);
+  height: var(--project-frame-dimension);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.project-sliding-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: transform 300ms ease-in-out;
+  height: var(--project-frame-dimension);
+  width: var(--project-frame-dimension);
+  z-index: 1;
+}
+
+.content-hidden {
+  transform: translate(0px, var(--project-frame-dimension));
+}
+
+.project-full-description {
+  width: var(--project-frame-dimension);
+  height: calc(var(--project-frame-dimension) * 0.9);
+  background-color: rgba(61, 61, 61, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-full-description * {
+  margin: auto 10%;
+  text-align: center;
+  color: #fffafa;
+}
+
+.view-project-page-btn {
+  width: var(--project-frame-dimension);
+  height: calc(var(--project-frame-dimension) * 0.1);
+  cursor: pointer;
+  background-color: rgba(37, 37, 37, 0.75);
+  color: #fffafa;
+  border: none;
+}
